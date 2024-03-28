@@ -1,0 +1,23 @@
+apiVersion: v1
+entries:
+  shrimpkey:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-03-28T16:12:08.202289998Z"
+    dependencies:
+    - condition: keydb.enabled
+      name: keydb
+      repository: https://enapter.github.io/charts/
+      version: 0.48.*
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: oci://registry-1.docker.io/bitnamicharts
+      version: 15.1.*
+    description: Firefish fork
+    digest: 3ba40abd6866442d964428b1205194f7fed124c2ddbf049f051e8519b5efaa1e
+    name: shrimpkey
+    type: application
+    urls:
+    - https://github.com/kreatoo/shrimpkey-helm/releases/download/shrimpkey-0.1.0/shrimpkey-0.1.0.tgz
+    version: 0.1.0
+generated: "2024-03-28T16:12:08.202300327Z"
