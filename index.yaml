@@ -3,6 +3,29 @@ entries:
   shrimpkey:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2024-03-28T17:57:23.678166928Z"
+    dependencies:
+    - condition: keydb.enabled
+      name: keydb
+      repository: https://enapter.github.io/charts/
+      version: 0.48.*
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: oci://registry-1.docker.io/bitnamicharts
+      version: 15.1.*
+    - condition: meilisearch.enabled
+      name: meilisearch
+      repository: https://meilisearch.github.io/meilisearch-kubernetes
+      version: 0.5.*
+    description: Firefish fork
+    digest: 006298f504f079050f8f344a33d2898e7bdd05a0872d0dd5788a1e42252857a7
+    name: shrimpkey
+    type: application
+    urls:
+    - https://github.com/kreatoo/charts/releases/download/shrimpkey-0.1.1/shrimpkey-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2024-03-28T16:12:08.202289998Z"
     dependencies:
     - condition: keydb.enabled
@@ -20,4 +43,4 @@ entries:
     urls:
     - https://github.com/kreatoo/shrimpkey-helm/releases/download/shrimpkey-0.1.0/shrimpkey-0.1.0.tgz
     version: 0.1.0
-generated: "2024-03-28T16:12:08.202300327Z"
+generated: "2024-03-28T17:57:23.678177668Z"
