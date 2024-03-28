@@ -1,0 +1,36 @@
+{{- if .Values.persistence.shrimpkeyconfig.enabled }}
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: {{ include "shrimpkey.fullname" . }}-shrimpkeyconfig  
+  labels:
+    {{- include "shrimpkey.labels" . | nindent 4 }} 
+spec:
+  accessModes:
+    - {{ .Values.persistence.shrimpkeyconfig.accessMode | default "ReadWriteOnce" }}
+  resources:
+    requests:
+      storage: {{ .Values.persistence.shrimpkeyconfig.size | default "1Gi" }} 
+  {{- if .Values.persistence.shrimpkeyconfig.storageClass }}
+  storageClassName: {{ .Values.persistence.shrimpkeyconfig.storageClass }} 
+  {{- end }}
+{{- end }}
+---
+{{- if .Values.persistence.files.enabled }}
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: {{ include "shrimpkey.fullname" . }}-files  
+  labels:
+    {{- include "shrimpkey.labels" . | nindent 4 }} 
+spec:
+  accessModes:
+    - {{ .Values.persistence.files.accessMode | default "ReadWriteOnce" }}
+  resources:
+    requests:
+      storage: {{ .Values.persistence.files.size | default "1Gi" }}
+  {{- if .Values.persistence.files.storageClass }}
+  storageClassName: {{ .Values.persistence.files.storageClass }} 
+  {{- end }}
+{{- end }} 
+

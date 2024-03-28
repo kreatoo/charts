@@ -1,0 +1,9 @@
+dependencies:
+- name: keydb
+  repository: https://enapter.github.io/charts/
+  version: 0.48.0
+- name: postgresql
+  repository: oci://registry-1.docker.io/bitnamicharts
+  version: 15.1.4
+digest: sha256:0940a83c374aba18cba7dafb5843c96f6c0fb9cfa97d5e4ed1a587cc54452863
+generated: "2024-03-26T23:05:43.53651602+03:00"
