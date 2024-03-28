@@ -96,11 +96,11 @@ data:
 
     #   ┌───────────────────────────┐
     #───┘ MeiliSearch configuration └─────────────────────────────────────
-    #meilisearch:
-    #  host: meilisearch
-    #  port: 7700
+    meilisearch:
+      host: {{ .Release.Name }}-meilisearch
+      port: {{ .Values.meilisearch.global.service.port }}
     #  ssl: false
-    #  apiKey:
+      apiKey: {{ .Values.meilisearch.global.environment.MEILI_MASTER_KEY | quote }}
 
     #   ┌─────────────────────┐
     #───┘ Sonic configuration └─────────────────────────────────────
