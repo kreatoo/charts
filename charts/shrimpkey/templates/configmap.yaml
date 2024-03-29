@@ -66,7 +66,7 @@ data:
     #───┘ Redis configuration └─────────────────────────────────────
 
     redis:
-      host: {{ .Release.Name }}-redis
+      host: {{ .Release.Name }}-redis-master
       port: {{ .Values.redis.containerPorts.redis }}
       #tls:
       #  host: localhost
