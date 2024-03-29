@@ -66,8 +66,8 @@ data:
     #───┘ Redis configuration └─────────────────────────────────────
 
     redis:
-      host: {{ .Release.Name }}-keydb
-      port: {{ .Values.keydb.global.port }}
+      host: {{ .Release.Name }}-redis
+      port: {{ .Values.redis.containerPorts.redis }}
       #tls:
       #  host: localhost
       #  rejectUnauthorized: false

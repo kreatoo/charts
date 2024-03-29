@@ -56,10 +56,11 @@ postgresql:
       ports:
         postgresql: "5432"
 
-keydb:
+redis:
   enabled: true
   global:
-    port: "6379"
+    containerPorts:
+      redis: "6379"
 
 
 meilisearch:
